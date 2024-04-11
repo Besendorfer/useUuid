@@ -23,5 +23,6 @@ export const useUuid = (uniqueKey: string, version: Version = 'v4') => {
     setCache(cache);
   }
 
-  return `${uniqueKey}-${cache[uniqueKey]}`;
+  // Return just the UUID, since this is very specifically the goal of the hook
+  return cache[uniqueKey];
 };
